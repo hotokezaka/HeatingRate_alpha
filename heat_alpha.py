@@ -283,7 +283,7 @@ def calc_heating_rate_alpha(Mej,vej, Amin,Amax,ffraction,Yas,kappa_effs,alpha_ma
     fraction = np.zeros(300)
     for i in range(0,len(ffraction)):
         A = ffraction[1][i]
-        fraction[A] = ffloat(A)*fraction[2][i]
+        fraction[A] = float(A)*ffraction[2][i]
     tmpA = 0.0
     for A in range(Amin,Amax+1):
         Xtot+=fraction[A]
