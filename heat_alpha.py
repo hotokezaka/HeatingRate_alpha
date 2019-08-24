@@ -222,6 +222,7 @@ def calc_heating_rate(Mej,vej, Amin,Amax,ffraction,kappa_effs,alpha_max,alpha_mi
                                                                                   
                             t_th = (1.+dt_th)*t_th
                     if(Egamma>0.):
+                        Z = fchain[1][i]
                         kappa_eff = kappa_effs[A][Z]
                         fth_gamma = th.calc_gamma_deposition(kappa_eff,t,Mej,vej,alpha_min,alpha_max,n)
                     else:
@@ -237,6 +238,7 @@ def calc_heating_rate(Mej,vej, Amin,Amax,ffraction,kappa_effs,alpha_max,alpha_mi
 
            
                     if(Egamma>0.):
+                        Z = fchain[1][i]
                         kappa_eff = kappa_effs[A][Z]
                         fth_gamma = th.calc_gamma_deposition(kappa_eff,t,Mej,vej,alpha_min,alpha_max,n)
                     else:
@@ -733,6 +735,7 @@ def calc_heating_rate_alpha(Mej,vej, Amin,Amax,ffraction,Yas,kappa_effs,alpha_ma
 #                    t_th += dt_th
                                     t_th = (1.+dt_th)*t_th
                                 if(Egamma>0.):
+                                    Z = fchain[1][i]
                                     kappa_eff = kappa_effs[A][Z]
                                     fth_gamma = th.calc_gamma_deposition(kappa_eff,t,Mej,vej,alpha_min,alpha_max,n) 
               #  print A, Z, kappa_eff, fth_gamma
@@ -745,6 +748,7 @@ def calc_heating_rate_alpha(Mej,vej, Amin,Amax,ffraction,Yas,kappa_effs,alpha_ma
           
                         else:
                             if(Egamma>0.):
+                                Z = fchain[1][i]
                                 kappa_eff = kappa_effs[A][Z]
                                 fth_gamma = th.calc_gamma_deposition(kappa_eff,t,Mej,vej,alpha_min,alpha_max,n) 
               #  print A, Z, kappa_eff, fth_gamma
